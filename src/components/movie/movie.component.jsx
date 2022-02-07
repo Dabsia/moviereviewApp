@@ -6,7 +6,11 @@ import React from 'react';
 
 const Movie = ({result}) => {
     
+    // The image complete path
+
     const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+
+    //  This function takes in the vote from the result props and checks what value the rating is
     function getClassByRate(vote){
         if (vote >= 8){
             return 'green'
@@ -20,7 +24,7 @@ const Movie = ({result}) => {
     }
     
     return(
-        
+        // The movie component that takes in the data from the result props
             <div className="movie">
                 <img src={IMG_PATH + result.poster_path} alt={result.title} />
                 <div className="movie-info">
