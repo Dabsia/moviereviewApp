@@ -35,6 +35,9 @@ body{
   
   /* overflow-x: hidden; */
 }
+/* .holder{
+  padding: 20px;
+} */
 header{
   padding: 1rem;
   display: flex;
@@ -91,7 +94,7 @@ main{
   align-items: center;
   justify-content: space-between;
   letter-spacing: .5px;
-  
+  padding: 3px 8px;
 }
 
 .movie-info h3{
@@ -116,7 +119,7 @@ main{
 }
 
 .movie-info span.red{
-  color: red
+  color: red;
 }
 
 .overview{
@@ -134,9 +137,39 @@ main{
 .movie:hover .overview{
 transform: translateY(0);
 }
+#search{
+  background-color: #fff;
+  margin-right: 10px;
+  display: flex;
+  border: none;
+  color: #22254b;
+  border-radius: 5px;
+}
+#search:focus{
+  background-color: #fff;
+}
+button{
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+}
+form{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: none;
+  position: fixed;
+}
 
 @media screen and (max-width:660px){
   .movie{
       width: 100%;
+  }
+  button{
+    width: 50px;
+    font-size: 14px;
   }
 }
